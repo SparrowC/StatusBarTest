@@ -2,6 +2,7 @@ package com.kun.statusbartest;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
@@ -36,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
             image.setImageResource(R.drawable.title_bar_nav_bg_pad);
         }
         i++;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
     }
 
     @Override
